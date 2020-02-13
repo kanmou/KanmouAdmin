@@ -1,0 +1,223 @@
+*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;margin: 0}
+html,body{}
+.KanmouMenu,.KanmouMenu * {
+	font-family: 'Open Sans',sans-serif;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	outline: 0
+}
+
+.KanmouMenu {
+	min-width: 100%;
+	float: left;
+	position: relative;
+}
+.menu-search{
+	background-color:rgba(249, 244, 244, 0);
+	border-radius:5px;
+	width:90%;
+	height:30px;
+	line-height: 28px;
+	border:thin solid #ddd;
+	text-indent:0.8em;
+	font-weight:bold;
+	color:rgba(0,0,0,.87);
+}
+#nav-list a{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	white-space:nowrap;
+	width:100%;
+}
+.KanmouMenu .KanmouMenu-header {
+	width: 100%;
+	height: 50px;
+	padding-left: 22px;
+	float: left;
+	line-height: 50px;
+	font-weight: 600;
+	color: rgba(0,0,0,.87);
+	background: #fafafa;
+}
+
+.KanmouMenu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+.KanmouMenu ul li {
+	width: 100%;
+	display: block;
+	float: left;
+	position: relative
+}
+.KanmouMenu ul li a i {
+/* 	width: 34px;
+float: left;
+line-height: 18px;
+font-size: 16px;
+text-align: left */
+}
+.KanmouMenu ul li a {
+	width: 100%;
+	padding: 14px 10px;
+	float: left;
+	text-decoration: none;
+    color: rgba(0,0,0,.87);
+	font-size: 13px;
+	background: #fafafa;
+	white-space: nowrap;
+	position: relative;
+	overflow: hidden;
+	-o-transition: color .2s linear,background .2s linear;
+	-moz-transition: color .2s linear,background .2s linear;
+	-webkit-transition: color .2s linear,background .2s linear;
+	transition: color .2s linear,background .2s linear
+}
+
+.KanmouMenu>ul>li.active>a,.KanmouMenu>ul>li:hover>a {
+    color: rgba(0,0,0,.87);
+	background: #e5e5e5
+}
+
+.KanmouMenu>ul>li>a {
+	border-bottom: solid 1px #ddd
+}
+.KanmouMenu * ul>li>a {
+	border-bottom: solid 1px #ddd
+}
+
+
+
+.KanmouMenu .submenu-sign {
+	float: right;
+	right: 22px;
+	position: absolute;
+	line-height: 19px;
+	font-size: 20px;
+	-o-transition: transform .3s linear;
+	-moz-transition: transform .3s linear;
+	-webkit-transition: transform .3s linear;
+	-ms-transition: transform .3s linear
+}
+
+.KanmouMenu ul ul.submenu .submenu-sign {
+	line-height: 16px
+}
+
+.KanmouMenu .submenu-signs>.submenu-sign {
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+
+.KanmouMenu ul ul.submenu,.KanmouMenu ul ul.submenu li ul.submenu {
+	width: 100%;
+	display: none;
+	position: static;
+}
+
+.KanmouMenu ul ul.submenu li {
+	clear: both;
+	width: 100%
+}
+
+.KanmouMenu ul ul.submenu li a {
+	width: 100%;
+	float: left;
+	font-size: 11px;
+	background: #fefefe;
+	border-top: none;
+	position: relative;
+	border-left: solid 6px transparent;
+	-o-transition: border .2s linear;
+	-moz-transition: border .2s linear;
+	-webkit-transition: border .2s linear;
+	transition: border .2s linear
+}
+
+.KanmouMenu ul ul.submenu li.active>a,.KanmouMenu ul ul.submenu li:hover>a {
+	border-left-color: #414956
+}
+
+.KanmouMenu ul ul.submenu>li>a {
+	padding-left: 30px
+}
+
+.KanmouMenu ul ul.submenu>li>ul.submenu>li>a {
+	padding-left: 45px
+}
+
+.KanmouMenu ul ul.submenu>li>ul.submenu>li>ul.submenu>li>a {
+	padding-left: 60px
+}
+
+.KanmouMenu ul li .KanmouMenu-label,.KanmouMenu ul ul.submenu li .KanmouMenu-label {
+	min-width: 20px;
+	padding: 1px 2px 1px 1px;
+	position: absolute;
+	right: 18px;
+	top: 14px;
+	font-size: 11px;
+	font-weight: 800;
+	color: #555;
+	text-align: center;
+	line-height: 18px;
+	background: #f0f0f0;
+	border-radius: 100%
+}
+
+.KanmouMenu ul ul.submenu li .KanmouMenu-label {
+	top: 12px
+}
+/*右键菜单*/
+
+.contextMenu {
+  -webkit-user-select: none;
+  display: none;
+  font-family: tahoma, arial, sans-serif;
+  font-size: 11px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  min-width: 180px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f3f7;
+  border: 1px solid #e2e2e2;
+}
+
+.contextMenu > li {
+  margin: 0 0 0 0;
+  padding: 3px;
+  background-repeat: no-repeat;
+}
+
+.contextMenu > li > a {
+  position: relative;
+  display: block;
+  padding: 3px 3px 3px 15px;
+  color: ButtonText;
+  text-decoration: none;
+  margin: 1px;
+}
+
+.contextMenu > li > a:hover {
+  border: 1px solid #fffbff;
+  outline: 1px solid #b5d3ff;
+  margin: 0;
+  cursor: default;
+}
+
+.contextMenu > li.divider {
+  border-top: 1px solid #e7e3e7;
+  border-bottom: 1px solid #ffffff;
+  height: 0;
+  padding: 0;
+  margin: 2px 0 2px 0px;
+}

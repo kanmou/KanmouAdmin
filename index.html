@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <!-- 编码标签 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 响应式 viewport meta 标签 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="public/static/css/KanmouMenu.css">
+    <link rel="stylesheet" href="public/static/css/layout.css">
+	<!-- script -->
+    <script src="public/vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script src="public/static/js/layout.js"></script>
+    <script src="public/static/js/KanmouMenu.js"></script>
+    
+
+    <title>KanmouAdmin - 看某后台管理模板系统</title>
+
+</head>
+  <body>
+
+<div class="containers">
+  <div class="header" style="overflow:hidden;">
+    <div class="logo"><h1>KANMOU</h1></div>
+  <!-- Fixed navbar -->
+  <div class="" style="float:left;">
+    <!-- 左侧 -->
+    <div class="layout-left">
+      <ul class="header-menu-nav">
+        <li class="show-hide"><a href="javascript:void();" style="font-size:28px;" title="隐藏/展开左侧菜单">≡</a></li>
+        <li  class="dropdown"><a href=""  class="dropbtn">菜单1<i>∨</i></a>
+          <dl class="dropdown-content" style="margin-top:60px">
+            <dd><a href="javascript:void(0);">KANMOU 1</a></dd>
+            <dd><a href="javascript:void(0);">KANMOU 2</a></dd>
+            <dd><a href="javascript:void(0);">KANMOU 3</a></dd>
+          </dl>
+        </li>
+        <li><a href="">菜单2</a></li>
+      </ul>
+    </div>
+      <!-- /左侧 -->
+      <!-- 右侧 -->
+    <div class="layout-right">
+      <ul class="header-right-nav">
+        <li style="padding:0"><a href=""  style="padding:0">欢迎您!</a></li>
+        <li  class="dropdown"><a href="javascript:void(0);" class="dropbtn">看某<i>∨</i></a>
+          <dl class="dropdown-content">
+            <dd><a href="javascript:void(0);">个人资料</a></dd>
+            <dd><a href="javascript:void(0);">修改密码</a></dd>
+            <dd><a href="javascript:void(0);">注 销</a></dd>
+          </dl>
+        </li>
+        <li><a href="javascript:void(0);" style="padding:0 3px 0 3px;color: rgba(255,255,255,.3);">|</a></li>
+        <li><a href="">退出</a></li>
+      </ul>
+    </div>
+    <!-- /右侧 -->
+  </div>
+  
+</div>
+
+
+<div class="main row">
+
+
+    <div class="main-left sidebar"  style="">
+      <!-- 右侧导航顶部容器 -->
+      <div class="N_top" style="width: 100%; border-bottom: solid 1px #e2e2e2;">
+        <div class="search-form">
+          <div class="KanmouMenu-header" id="form"></div>
+        </div>
+      </div>
+      <!-- /右侧导航顶部容器 -->
+      <!-- 左侧菜单开始 -->
+	    <div class="left-nav bg-light">
+        <div id="KanmouMenu" class="KanmouMenu">    
+          <ul id="nav-list">     
+            <li class="active"><a href="#" tab-id="20200209"><i class="fa fa-home"></i>首页</a></li>
+            <li><a href="#"><i class="fa fa-glass"></i>事件</a></li>
+            <li><a href="#"><i class="fa fa-file-image-o"></i>相册</a><span class="KanmouMenu-label">18</span></li>
+            <li><a href="#"><i class="fa fa-cog"></i>服务</a>
+              <ul class="submenu">
+                <li><a href="#">网页设计</a></li>
+                <li><a href="#">团队</a></li>
+                <li><a href="#">设计</a>
+                  <ul class="submenu">
+                    <li><a href="#">绘图</a></li>
+                    <li><a href="#">测量</a></li>
+                    <li><a href="#">Photoshop教程</a></li>
+                    <li><a href="#">字体</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">咨询</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-home"></i>系统管理 </a></li>
+            <li><a href="#"><i class="fa fa-suitcase"></i>文件</a>
+              <ul class="submenu">
+                <li><a href="#">网页设计</a></li>
+                <li><a href="#">团队</a><span class="KanmouMenu-label">20</span>
+                </li>
+                <li><a href="#">Photoshop教程</a></li>
+                <li><a href="#">程序设计</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-user"></i>关于我们</a></li>
+            <li><a href="#"><i class="fa fa-envelope"></i>联系方式</a></li>      
+          </ul>
+        </div>
+	  </div>
+    <!-- 左侧菜单结束 -->
+    </div>
+    <div class="main-right">
+
+    <div class="T_tab" style="background:#212fad">
+      <div class="content-tabs" style="margin-right:0px;">
+        <button class="roll-nav roll-left"><i><<</i>
+        </button>
+        <!-- TAB菜单容器 -->
+        <div class="page-tabs">
+          <div class="tab-panel">
+            <a href="javascript:;" class="tab-option active" data-id="tabs.html">首页</a>
+          </div>
+        </div>
+        <!-- /TAB菜单容器 -->
+        <button class="roll-nav roll-right"><i>>></i>
+        </button>
+      </div>
+    </div>
+
+			<iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="view/main.html" frameborder="0" data-id="view/main.html" seamless></iframe>
+    </div>
+</div>
+
+<div class="footer row  text-center">
+  <div class="container">
+    <span class="text-muted">Copyright  &copy; 2020 看某（Kanmou.NET）. All Rights Reserved. </span>
+  </div>
+</div>
+</div>
+
+  </body>
+</html>

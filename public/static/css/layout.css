@@ -1,0 +1,146 @@
+html,body{overflow-x:hidden;overflow-y:hidden;margin:0;padding:0;
+	font-size: 14px;
+	word-wrap: break-word;
+	color:rgba(0,0,0,.87);
+	font-family: Helvetica Neue,NotoSansHans-Regular,AvenirNext-Regular,arial,Hiragino Sans GB,Microsoft Yahei,WenQuanYi Micro Hei,serif;
+}
+iframe {overflow-x:hidden;overflow-y:auto;}
+    
+    
+ul,li{ padding:0;margin:0;list-style:none}
+a{ text-decoration:none}
+a:link{color: rgba(255,255,255,.8);}
+a:visited{color:#fff;}
+a:hover{color: #fff}
+i{font-style:normal}
+* a{color:rgba(0,0,0,.87);}
+.containers{position: absolute;margin: 0;padding: 0; width: 100%;height: 100%;}
+.header {
+	width: 100%;height:60px;background:#343a40;font-size: 14px;color: rgba(255,255,255,.7);line-height: 60px;
+z-index: 11}
+.main {position: relative;height:calc(100%-100);overflow:hidden;z-index: 10}
+.footer {height:40px;background:#343a40;line-height:40px;}
+.layout-right{
+	position: absolute;
+	font-size: 16px;
+	width: auto;
+	right: 0;
+	padding-right: 0px;
+}
+
+.logo{
+	width: 280px;
+	float: left;
+	padding-left: 10px;
+}
+.shrink-right{
+	float: left;
+	padding-left: 0px;
+
+}
+.shrink-right{
+	font-size: 30px;
+	padding-right: 15px;
+	margin-right: 50px;
+}
+.header-menu-nav{
+	position:absolute;
+}
+.header-menu-nav li{
+    float: left;
+    position: relative;
+}
+.header-menu-nav li a {
+	font-size: 16px;
+    float: left;    
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none; 
+}
+
+.header-right-nav {
+	position: relative;
+}
+.header-right-nav li{
+    float: left;
+    position: relative;
+}
+.header-right-nav li a {
+    float: left;    
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none; 
+}
+
+.dropdown {
+    display: inline-block;    
+}
+.header-menu-nav .dropdown-content{
+	left: 0;
+}
+.header-right-nav .dropdown-content{
+	width: 100px;
+}
+.header-right-nav .dropdown-content dd{
+	width: 100%;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #f9f9f9;
+    box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.2);
+    margin-top: 60px;
+    width:210px;
+    right: 0;
+    z-index: 8888;
+}
+.dropdown-content dd{height: 40px;width: 100%;line-height: 40px; float: left;}
+.dropdown-content dd a {
+	position: relative;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content dd:hover{background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+.T-tab,.N-top {height:42px;width: 100%;}
+.main-left {width:280px;position:absolute;z-index: 5;}
+.main-right{position: absolute;right: 0;}
+.sidebar {overflow-x:hidden;overflow-y:hidden;}
+.left-nav {overflow-x:hidden;overflow-y:scroll;}
+.navbar-brand {font-size:14px;}
+.content-tabs {background:#e9ecef;border-bottom:solid 1px #e2e2e2;}
+/*左侧搜索*/
+.search-form {padding:5px 10px;flex:none;background: #fafafa;z-index: 2;}
+.search-form input {height:32px;width:260px;background: #fefefe;margin: 0 auto;z-index: 3;}
+.search-form input:focus{outline: 1px solid #e2e2e2;}
+/* Tab样式 */
+.content-tabs {position:relative;height:42px;border-bottom:solid 1px #e2e2e2;background:#fafafa;line-height:41px;}
+.content-tabs .roll-nav,.page-tabs-list {position:absolute;width:41px;height:41px;text-align:center;z-index:2;top:0;}
+/*左右滚动*/
+.content-tabs .roll-left {position: absolute; left:0;border-right:solid 1px #ddd;border-left:solid 1px #ddd;background:#fafafa;}
+.content-tabs .roll-right {position: absolute;right:0;border-left:solid 1px #ddd;background:#fafafa;}
+.content-tabs .roll-left,.content-tabs .roll-right{height:41px;width:41px;outline:0;background:#f2f2f2;color:#000;}
+.content-tabs button {border:0;height:41px;width:41px;outline:0;}
+
+.page-tabs {margin-left:41px;width:100000px;height:41px;overflow:hidden;position: absolute;}
+.page-tabs .tab-panel {position:relative;float:left;z-index: 0;}
+.page-tabs a {display:block;float:left;border-right:solid 1px #ddd;padding:0 15px;line-height: 41px;color:rgba(0,0,0,.87);}
+.page-tabs a span:hover {color:#c00;}
+.page-tabs a:hover,.content-tabs .roll-nav:hover {color:#000;background:#e2e2e2;cursor:pointer; text-decoration:none;}
+.page-tabs a span {color:#ccc;cursor:default}
+.page-tabs a.active,.page-tabs a.active:hover,.page-tabs a.active i:hover {background:#e2e2e2;color:#000;}
+.page-tabs .tab-panel .tab-close{margin-left: 10px;font-size: 14px}
+/* tab样式 */
+.left-nav .navbar{padding: 0;content: left;}
+.footer{text-align: center;color: #666;position: absolute;bottom: 0;width: 100%}
