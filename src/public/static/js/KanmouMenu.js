@@ -88,6 +88,9 @@ $(function() {
             if (!$(this).hasClass("active")) {
                 $(".tab-panel a").removeClass("active");
                 $(this).addClass("active");
+
+                $(".k_iframe iframe").css("display","none");
+                $(".k_iframe iframe[src='"+$(this).attr("data-id")+"']").css("display","");
             }
             // 显示当前激活的TAB菜单被遮挡的区域
             if (thisTab < $(".main-left").width()+40) {
@@ -121,14 +124,27 @@ $(function() {
                 // 顶级菜单内容（不含有子菜单的菜单）
                 if (!$(this).children(".submenu").length > 0) {                        
                     var title = $.trim(aLabel.text()),                       
-                        href = ($(this).children("a").attr("href")),
-                        tabId = ($(this).children("a").attr("tab-id")),
+                        dataId = ($(this).children("a").attr("data-id")),
+                        // tabId = ($(this).children("a").attr("tab-id")),
+                        // 组合tab标签
                         aHtml = '<a href="javascript:;" class="tab-option active"'+
-                        'data-id="'+href+'">'+title+'<span class="tab-close" title="关闭">×</span></a>';
-                    // 增加Tab菜单，同时对应增加iframe页面
-                    $(".tab-panel a").removeClass("active");
+                        'data-id="'+dataId+'">'+title+'<span class="tab-close" title="关闭">×</span></a>',
+                        // 组合ifram标签
+                        iframeHtml = '<iframe name="iframe0" width="100%" height="100%"' +
+                        'src="'+dataId+'" frameborder="0"></iframe>'
                     
-                    if($(".tab-panel").append(aHtml)){
+                    // 增加Tab菜单，同时对应增加iframe页面
+                    // 
+                    // Tab标签中是否已经有打开的标签
+                    if($(".tab-option[data-id='"+dataId+"']").attr("data-id")==dataId){
+                        $(".tab-panel a").removeClass("active");
+                        $(".tab-option[data-id='"+dataId+"']").addClass("active");
+
+                        $(".k_iframe iframe").css("display","none");
+                        $(".k_iframe iframe[src='"+dataId+"']").css("display","");
+                    }else{
+                        $(".tab-panel a").removeClass("active");
+                        $(".tab-panel").append(aHtml);
                         // Tab面板的宽度减去TAB内容容器的宽度
                         var tabMoreWidth = $(".tab-panel").width()-
                             ($('.content-tabs').width()-$(".roll-left").width()*3+4);
@@ -136,7 +152,10 @@ $(function() {
                             // TAB面板向左偏移
                             $(".tab-panel").css("left","-"+tabMoreWidth+"px");
                         }
+                        $(".k_iframe iframe").css("display","none");
+                        $(".k_iframe").append(iframeHtml);
                     }
+
                 }
                 if($(this).parent(".submenu").length > 0){
                     // 移除顶级菜单的激活状态
