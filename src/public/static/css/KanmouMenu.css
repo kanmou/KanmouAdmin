@@ -30,6 +30,7 @@ html,body{}
 	-o-text-overflow:ellipsis;
 	white-space:nowrap;
 	width:100%;
+	cursor:pointer;
 }
 .KanmouMenu .KanmouMenu-header {
 	width: 100%;

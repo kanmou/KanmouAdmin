@@ -209,7 +209,7 @@ $(function() {
             }), input = $("<input>").attr({
                 "class":"menu-search",
                 type:"text",
-                "placeholder":"输入关键词搜索",
+                "placeholder":"输入关键字搜索",
             });
             $(form).append(input).appendTo(header);
             $(input).change(function() {
