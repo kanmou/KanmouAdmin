@@ -14,12 +14,11 @@ a:visited{color:#fff;}
 a:hover{color: #fff}
 i{font-style:normal}
 * a{color:rgba(0,0,0,.87);}
-.containers{position: absolute;margin: 0;padding: 0; width: 100%;height: 100%;}
+.containers{position: relative;margin: 0;padding: 0; width: 100%;height: 100%;}
 .header {
 	width: 100%;height:60px;background:#343a40;font-size: 14px;color: rgba(255,255,255,.7);line-height: 60px;
 z-index: 11}
 .main {position: relative;height:calc(100%-100);overflow:hidden;z-index: 10}
-.footer {height:40px;background:#343a40;line-height:40px;}
 .layout-right{
 	position: absolute;
 	font-size: 16px;
@@ -112,29 +111,29 @@ z-index: 11}
     background-color: #f9f9f9;
     color: #000;
 }
-
-.T-tab,.N-top {height:40px;width: 100%;border-bottom: solid 1px #e2e2e2;}
+.tab-box{height:40px;width: 100%;border-bottom: solid 1px #e2e2e2;box-sizing: border-box;}
+.nav-top-box {height:40px;width: 100%;border-bottom: solid 1px #e2e2e2;background:#fafafa;box-sizing: border-box;}
 .main-left {position:absolute;width:280px;z-index: 5;}
 .main-right{position: absolute;right: 0;}
 .sidebar {overflow-x:hidden;overflow-y:hidden;}
-.left-nav {position: relative; overflow-x:hidden;overflow-y:scroll;}
+.left-nav {position: relative; overflow-x:hidden;overflow-y:scroll;background: #fafafa;}
 .navbar-brand {font-size:14px;}
 /*左侧搜索*/
-.search-form {padding:4px 10px;flex:none;background: #fafafa;z-index: 2;}
-.search-form input {height:32px;width:260px;background: #fefefe;margin: 0 auto;z-index: 3;}
+.search-form {padding:3px 10px;flex:none;background: #fafafa;z-index: 2;}
+.search-form input {height:33px;width:260px;background: #fefefe;margin: 0 auto;z-index: 3;}
 .search-form input:focus{outline: 1px solid #e2e2e2;}
 /* Tab样式 */
-.content-tabs {position:relative;height:40px;border-bottom:solid 1px #e2e2e2;background:#fafafa;line-height:39px;box-sizing: border-box;}
+.content-tabs {position:relative;line-height:39px;}
 .content-tabs .roll-nav,.page-tabs-list {text-align:center;z-index:2;top:0;}
 /*左右滚动*/
-.content-tabs .roll-left {position: absolute; left:0;border-right:solid 1px #ddd;border-left:solid 1px #ddd;box-sizing: border-box;}
-.content-tabs .roll-right {position: absolute;right:0;border-left:solid 1px #ddd;background:#fafafa;box-sizing: border-box;}
-.content-tabs .roll-left,.content-tabs .roll-right{height:39px;width:41px;outline:0;background:#f2f2f2;color:#000;}
+.content-tabs .roll-left {position: absolute; left:0;border-right:solid 1px #f1f1f1;border-left:solid 1px #f1f1f1;box-sizing: border-box;}
+.content-tabs .roll-right {position: absolute;right:0;border-left:solid 1px #f1f1f1;background:#fafafa;box-sizing: border-box;}
+.content-tabs .roll-left,.content-tabs .roll-right{height:39px;width:41px;outline:0;background:#fafafa;color:#000;}
 .content-tabs button {border:0;line-height: 39px;}
 
 .page-tabs {position: absolute;margin-left:41px;width:100000px;height:39px;overflow:hidden;}
 .page-tabs .tab-panel {position:relative;float:left;z-index: 0;}
-.page-tabs a {display:block;float:left;border-right:solid 1px #ddd;padding:0 15px;line-height: 40px;color:rgba(0,0,0,.87);box-sizing: border-box;}
+.page-tabs a {display:block;float:left;border-right:solid 1px #f1f1f1;padding:0 15px;color:rgba(0,0,0,.87);box-sizing: border-box;}
 .page-tabs a span:hover {color:#c00;}
 .page-tabs a:hover,.content-tabs .roll-nav:hover {color:#000;background:#e2e2e2;cursor:pointer; text-decoration:none;}
 .page-tabs a span {color:#ccc;cursor:default}
@@ -142,4 +141,7 @@ z-index: 11}
 .page-tabs .tab-panel .tab-close{margin-left: 10px;font-size: 14px}
 /* tab样式 */
 .left-nav .navbar{padding: 0;content: left;}
-.footer{text-align: center;color: #666;position: absolute;bottom: 0;width: 100%}
+/* border-bottom: 1px solid #edeef0;
+    background-color: #fcfcfc; */
+.footer{position: relative;bottom: 0;border-top: 2px solid #edeef0;
+  text-align: center;color: #666;height:40px;line-height:38px;width: 100%;box-sizing: border-box;}

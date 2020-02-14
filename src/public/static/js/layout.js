@@ -17,11 +17,12 @@ function autoFit() {
 	var main  = $(window).height()-$(".header").height()-$(".footer").height();
 	$(".main").height(main);
   // iframe高度
-  $("iframe").height(main-$(".T_tab").height());
+  $("iframe").height(main-$(".tab-box").height()-1);
   // 左侧导航顶部容器的高度等于右侧TAB容器的高度
-  $(".N_top").height($(".T_tab").height());
+  $(".nav-top-box").height($(".tab-box").height());
   // 左侧导航的高度
-  $(".left-nav").height(main-$(".N_top").height());
+  $(".left-nav").height(main-$(".nav-top-box").height());
+  // alert($(".tab-box").height());
 	
   //
   // var winWidth = width($(window).width();

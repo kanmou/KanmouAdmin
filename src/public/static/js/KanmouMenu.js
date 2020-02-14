@@ -80,7 +80,7 @@ $(function() {
             // 当前tab的宽度
             var thisTabWidth = $(this).width()+30;
             // 向右移动按钮的左偏移值
-            var rollRight = $(".roll-right").offset().left+4;
+            var rollRight = $(".roll-right").offset().left;
             // 被遮挡的区域（宽度）
             var obscuredArea = rollRight -(thisTab+thisTabWidth);
 
@@ -90,8 +90,8 @@ $(function() {
                 $(this).addClass("active");
             }
             // 显示当前激活的TAB菜单被遮挡的区域
-            if (thisTab < $(".main-left").width()+41) {
-                var temp = $(".main-left").width()+41-thisTab;
+            if (thisTab < $(".main-left").width()+40) {
+                var temp = $(".main-left").width()+40-thisTab;
                 $(".tab-panel").css("left",($(".tab-panel").position().left+temp)+"px");
             }            
             // 向左偏移相应的值，确保当前激活的TAB完全显示

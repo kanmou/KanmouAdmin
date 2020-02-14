@@ -15,7 +15,7 @@ html,body{}
 }
 .menu-search{
 	background-color:rgba(249, 244, 244, 0);
-	border-radius:5px;
+	/*border-radius:5px;*/
 	width:90%;
 	height:30px;
 	line-height: 28px;
