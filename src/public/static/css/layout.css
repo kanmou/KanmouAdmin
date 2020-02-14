@@ -70,7 +70,7 @@ z-index: 11}
     padding-left: 10px;
     padding-right: 10px;
     text-decoration: none; 
-}
+}   
 
 .dropdown {
     display: inline-block;    
@@ -119,23 +119,22 @@ z-index: 11}
 .sidebar {overflow-x:hidden;overflow-y:hidden;}
 .left-nav {overflow-x:hidden;overflow-y:scroll;}
 .navbar-brand {font-size:14px;}
-.content-tabs {background:#e9ecef;border-bottom:solid 1px #e2e2e2;}
 /*左侧搜索*/
-.search-form {padding:5px 10px;flex:none;background: #fafafa;z-index: 2;}
+.search-form {padding:4px 10px;flex:none;background: #fafafa;z-index: 2;}
 .search-form input {height:32px;width:260px;background: #fefefe;margin: 0 auto;z-index: 3;}
 .search-form input:focus{outline: 1px solid #e2e2e2;}
 /* Tab样式 */
-.content-tabs {position:relative;height:42px;border-bottom:solid 1px #e2e2e2;background:#fafafa;line-height:41px;}
-.content-tabs .roll-nav,.page-tabs-list {position:absolute;width:41px;height:41px;text-align:center;z-index:2;top:0;}
+.content-tabs {position:relative;height:40px;border-bottom:solid 1px #e2e2e2;background:#fafafa;line-height:39px;box-sizing: border-box;}
+.content-tabs .roll-nav,.page-tabs-list {text-align:center;z-index:2;top:0;}
 /*左右滚动*/
-.content-tabs .roll-left {position: absolute; left:0;border-right:solid 1px #ddd;border-left:solid 1px #ddd;background:#fafafa;}
-.content-tabs .roll-right {position: absolute;right:0;border-left:solid 1px #ddd;background:#fafafa;}
-.content-tabs .roll-left,.content-tabs .roll-right{height:41px;width:41px;outline:0;background:#f2f2f2;color:#000;}
-.content-tabs button {border:0;height:41px;width:41px;outline:0;}
+.content-tabs .roll-left {position: absolute; left:0;border-right:solid 1px #ddd;border-left:solid 1px #ddd;box-sizing: border-box;}
+.content-tabs .roll-right {position: absolute;right:0;border-left:solid 1px #ddd;background:#fafafa;box-sizing: border-box;}
+.content-tabs .roll-left,.content-tabs .roll-right{height:39px;width:41px;outline:0;background:#f2f2f2;color:#000;}
+.content-tabs button {border:0;}
 
-.page-tabs {margin-left:41px;width:100000px;height:41px;overflow:hidden;position: absolute;}
+.page-tabs {position: absolute;margin-left:41px;width:100000px;height:39px;overflow:hidden;}
 .page-tabs .tab-panel {position:relative;float:left;z-index: 0;}
-.page-tabs a {display:block;float:left;border-right:solid 1px #ddd;padding:0 15px;line-height: 41px;color:rgba(0,0,0,.87);}
+.page-tabs a {display:block;float:left;border-right:solid 1px #ddd;padding:0 15px;line-height: 40px;color:rgba(0,0,0,.87);box-sizing: border-box;}
 .page-tabs a span:hover {color:#c00;}
 .page-tabs a:hover,.content-tabs .roll-nav:hover {color:#000;background:#e2e2e2;cursor:pointer; text-decoration:none;}
 .page-tabs a span {color:#ccc;cursor:default}

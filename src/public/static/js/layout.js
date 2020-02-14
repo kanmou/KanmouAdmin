@@ -21,7 +21,7 @@ function autoFit() {
   // 左侧导航顶部容器的高度等于右侧TAB容器的高度
   $(".N_top").height($(".T_tab").height());
   // 左侧导航的高度
-  $(".left-nav").height(main-$(".N_top").height()-1);
+  $(".left-nav").height(main-$(".N_top").height());
 	
   //
   // var winWidth = width($(window).width();
