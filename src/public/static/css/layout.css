@@ -113,11 +113,11 @@ z-index: 11}
     color: #000;
 }
 
-.T-tab,.N-top {height:42px;width: 100%;}
-.main-left {width:280px;position:absolute;z-index: 5;}
+.T-tab,.N-top {height:40px;width: 100%;border-bottom: solid 1px #e2e2e2;}
+.main-left {position:absolute;width:280px;z-index: 5;}
 .main-right{position: absolute;right: 0;}
 .sidebar {overflow-x:hidden;overflow-y:hidden;}
-.left-nav {overflow-x:hidden;overflow-y:scroll;}
+.left-nav {position: relative; overflow-x:hidden;overflow-y:scroll;}
 .navbar-brand {font-size:14px;}
 /*左侧搜索*/
 .search-form {padding:4px 10px;flex:none;background: #fafafa;z-index: 2;}
@@ -130,7 +130,7 @@ z-index: 11}
 .content-tabs .roll-left {position: absolute; left:0;border-right:solid 1px #ddd;border-left:solid 1px #ddd;box-sizing: border-box;}
 .content-tabs .roll-right {position: absolute;right:0;border-left:solid 1px #ddd;background:#fafafa;box-sizing: border-box;}
 .content-tabs .roll-left,.content-tabs .roll-right{height:39px;width:41px;outline:0;background:#f2f2f2;color:#000;}
-.content-tabs button {border:0;}
+.content-tabs button {border:0;line-height: 39px;}
 
 .page-tabs {position: absolute;margin-left:41px;width:100000px;height:39px;overflow:hidden;}
 .page-tabs .tab-panel {position:relative;float:left;z-index: 0;}
