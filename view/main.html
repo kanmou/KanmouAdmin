@@ -1,24 +1,306 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-    <!-- 编码标签 -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- 响应式 viewport meta 标签 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../public/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/static/css/layout.css">
-	<!-- script -->
-    <script src="../public/vendor/jquery/jquery-3.4.1.min.js"></script>
-    <script src="../public/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../public/static/js/layout.js"></script>
-    <title>顶看-Dingkan Admin模板</title>
- </head>
-<body>
-<div style="position: absolute;top: 50px; ">
-  <h1 style="position: relative; color:orange;line-height:60px;padding-left:10px;font-size: 40px;font-weight: bold;letter-spacing: -1px;margin:0 auto">Hi！KANMOU</h1>
-  </div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title></title>
+      <!-- Slick Slider -->
+      <link rel="stylesheet" type="text/css" href="../public/vendor/slick/slick.min.css"/>
+      <link rel="stylesheet" type="text/css" href="../public/vendor/slick/slick-theme.min.css"/>
+      <!-- Feather Icon-->
+      <link href="../public/vendor/icons/feather.css" rel="stylesheet" type="text/css">
+      <!-- Bootstrap core CSS -->
+      <link href="../public/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="../public/static/css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="py-4">
+         <div class="container-fluid">
+            <div class="row">
+               <!-- Main Content -->
+               <main class="col col-xl-9 order-xl-2 col-lg-8 order-lg-1 col-md-12 col-sm-12 col-12">
+                  <div class="box shadow-sm border rounded bg-white mb-3 osahan-share-post">
+                     <!-- <h5 class="pl-3 pt-3 pr-3 border-bottom mb-0 pb-3">More suggestions for you</h5> -->
+                     <ul class="nav border-bottom osahan-line-tab" id="myTab" role="tablist">
+                        <li class="nav-item">
+                           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">待办事项</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">应用</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">页面</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="type-tab" data-toggle="tab" href="#type" role="tab" aria-controls="type" aria-selected="false">标签</a>
+                        </li>
+                     </ul>
+                     <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                           <div class="p-3">
+                              <div class="row">
+                                 <div class="col-md-4">
+                                    <a href="profile.html">
+                                       <div class="border network-item rounded mb-3">
+                                          <div class="p-3 d-flex align-items-center network-item-header">
+                                             <div class="dropdown-list-image mr-3">
+                                                <img class="rounded-circle" src="../public/static/img/p1.png" alt="">
+                                             </div>
+                                             <div class="font-weight-bold">
+                                                <h6 class="font-weight-bold text-dark mb-0">评论</h6>
+                                                <div class="small text-black-50">IT讲师</div>
+                                             </div>
+                                          </div>
+                                          <div class="d-flex align-items-center p-3 border-top border-bottom network-item-body">
+                                             <span class="font-weight-bold small text-primary">共有4条数据待处理</span>
+                                          </div>
+                                          <div class="network-item-footer py-3 d-flex text-center">
+                                             <div class="col-6 pl-3 pr-1">
+                                                <button type="button" class="btn btn-primary btn-sm btn-block">查看</button>
+                                             </div>
+                                             <div class="col-6 pr-3 pl-1">
+                                                <button type="button" class="btn btn-outline-primary btn-sm btn-block">忽略</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <a href="profile.html">
+                                       <div class="border network-item rounded mb-3">
+                                          <div class="p-3 d-flex align-items-center network-item-header">
+                                             <div class="dropdown-list-image mr-3">
+                                                <img class="rounded-circle" src="../public/static/img/p2.png" alt="">
+                                             </div>
+                                             <div class="font-weight-bold">
+                                                <h6 class="font-weight-bold text-dark mb-0">文档</h6>
+                                                <div class="small text-black-50">WEB程设计人员</div>
+                                             </div>
+                                          </div>
+                                          <div class="d-flex align-items-center p-3 border-top border-bottom network-item-body">
+                                             <span class="font-weight-bold small text-primary">共有8篇新文章未审核</span>
+                                          </div>
+                                          <div class="network-item-footer py-3 d-flex text-center">
+                                             <div class="col-6 pl-3 pr-1">
+                                                <button type="button" class="btn btn-primary btn-sm btn-block">查看</button>
+                                             </div>
+                                             <div class="col-6 pr-3 pl-1">
+                                                <button type="button" class="btn btn-outline-primary btn-sm btn-block">忽略</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <a href="profile.html">
+                                       <div class="border network-item rounded mb-3">
+                                          <div class="p-3 d-flex align-items-center network-item-header">
+                                             <div class="dropdown-list-image mr-3">
+                                                <img class="rounded-circle" src="../public/static/img/p3.png" alt="">
+                                             </div>
+                                             <div class="font-weight-bold">
+                                                <h6 class="font-weight-bold text-dark mb-0">订单</h6>
+                                                <div class="small text-black-50">美术设计师</div>
+                                             </div>
+                                          </div>
+                                          <div class="d-flex align-items-center p-3 border-top border-bottom network-item-body">
+                                             <span class="font-weight-bold small text-primary">有999条订单待处理</span>
+                                          </div>
+                                          <div class="network-item-footer py-3 d-flex text-center">
+                                             <div class="col-6 pl-3 pr-1">
+                                                <button type="button" class="btn btn-primary btn-sm btn-block">查看</button>
+                                             </div>
+                                             <div class="col-6 pr-3 pl-1">
+                                                <button type="button" class="btn btn-outline-primary btn-sm btn-block">忽略</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                           <div class="p-3 w-100">
+                              <h6>持续跟新中……</h6>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                           <div class="p-3 w-100">
+                              <h6>陆续跟新中……</h6>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="type" role="tabpanel" aria-labelledby="type-tab">
+                           <div class="p-3 w-100">
+                              <h6>陆续跟新中……</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box shadow-sm border rounded bg-white mb-3 osahan-post">
+                           <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">
+                              <div class="dropdown-list-image mr-3">
+                                 <img class="rounded-circle" src="../public/static/img/p5.png" alt="">
+                                 <div class="status-indicator bg-success"></div>
+                              </div>
+                              <div class="font-weight-bold">
+                                 <div class="text-truncate">张三</div>
+                                 <div class="small text-gray-500">基于bootstrap的产品设计师</div>
+                              </div>
+                              <span class="ml-auto small">3小时前</span>
+                           </div>
+                           <div class="p-3 border-bottom osahan-post-body">
+                              <p class="mb-0">程序设计是一个痛苦的过程，但只要我们持之以恒的坚持，未来，我们的生活就会变得越来越好！</a></p>
+                           </div>
+                           <div class="p-3 border-bottom osahan-post-footer">
+                              <a href="#" class="mr-3 text-secondary"><i class="feather-heart text-danger"></i> 16</a>
+                              <a href="#" class="mr-3 text-secondary"><i class="feather-message-square"></i> 8</a>
+                              <a href="#" class="mr-3 text-secondary"><i class="feather-share-2"></i> 2</a>
+                           </div>
+                           <div class="p-3">
+                              <button type="button" class="btn btn-outline-primary btn-sm mr-1">未来</button>
+                              <button type="button" class="btn btn-outline-secondary btn-sm mr-1">设计</button>
+                              <button type="button" class="btn btn-outline-secondary btn-sm mr-1">程序</button>
+                           </div>
+                        </div>
+                        <div class="box shadow-sm border rounded bg-white mb-3">
+                           <div class="box-title border-bottom p-3">
+                              <h6 class="m-0">产品仓库</h6>
+                           </div>
+                           <div class="p-3">
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="card overflow-hidden">
+                                       <iframe src="htt://www.kanmou.net/public/static/img/kanmou-github.jpg" width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                       <div class="card-body">
+                                          <h6 class="card-title">Gitee仓库</h6>
+                                          <p class="card-text">https://gitee.com/kanmou</p>
+                                          <a href="https://gitee.com/kanmou" class="text-link font-weight-bold"><i class="feather-external-link"></i> 详情</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="card overflow-hidden">
+                                       <iframe src="htt://www.kanmou.net/public/static/img/kanmou-github.jpg" width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                       <div class="card-body">
+                                          <h6 class="card-title">GitHub仓库</h6>
+                                          <p class="card-text">https://github.com/kanmou</p>
+                                          <a href="https://github.com/kanmou" class="text-link font-weight-bold"><i class="feather-external-link"></i> 详情</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+               </main>
+               <aside class="col col-xl-3 order-xl-2 col-lg-4 order-lg-2 col-0">
+                  <div class="box shadow-sm border rounded bg-white mb-3 profile-box text-center">
+                     <div class="py-4 px-3 border-bottom">
+                        <img src="../public/static/img/p7.png" class="../public/static/img-fluid mt-2 rounded-circle" alt="Responsive image">
+                        <h5 class="font-weight-bold text-dark mb-1 mt-4">Kan Mou</h5>
+                        <p class="mb-0 text-muted">软件开发程序员</p>
+                     </div>
+                     <div class="d-flex">
+                        <div class="col-6 border-right p-3">
+                           <h6 class="font-weight-bold text-dark mb-1">358</h6>
+                           <p class="mb-0 text-black-50 small">关注</p>
+                        </div>
+                        <div class="col-6 p-3">
+                           <h6 class="font-weight-bold text-dark mb-1">85</h6>
+                           <p class="mb-0 text-black-50 small">粉丝</p>
+                        </div>
+                     </div>
+                     <div class="overflow-hidden border-top">
+                        <a class="font-weight-bold p-3 d-block" href="profile.html">详细资料</a>
+                     </div>
+                  </div>
+                  <div class="box shadow-sm border rounded bg-white mb-3">
+                     <div class="box-title border-bottom p-3">
+                        <h6 class="m-0">活跃会员</h6>
+                     </div>
+                     <div class="box-body p-3">
+                        <div class="d-flex align-items-center osahan-post-header mb-3 people-list">
+                           <div class="dropdown-list-image mr-3">
+                              <img class="rounded-circle" src="../public/static/img/p4.png" alt="">
+                           </div>
+                           <div class="font-weight-bold mr-2">
+                              <div class="text-truncate">张三</div>
+                              <div class="small text-gray-500">美好的未来
+                              </div>
+                           </div>
+                           <span class="ml-auto"><button type="button" class="btn btn-outline-primary btn-sm">联系</button>
+                           </span>
+                        </div>
+                        <div class="d-flex align-items-center osahan-post-header mb-3 people-list">
+                           <div class="dropdown-list-image mr-3">
+                              <img class="rounded-circle" src="../public/static/img/p6.png" alt="">
+                           </div>
+                           <div class="font-weight-bold mr-2">
+                              <div class="text-truncate">李四</div>
+                              <div class="small text-gray-500">很懒，没有留下什么。
+                              </div>
+                           </div>
+                           <span class="ml-auto"><button type="button" class="btn btn-outline-primary btn-sm">联系</button>
+                           </span>
+                        </div>
+                        <div class="d-flex align-items-center osahan-post-header mb-3 people-list">
+                           <div class="dropdown-list-image mr-3">
+                              <img class="rounded-circle" src="../public/static/img/p7.png" alt="">
+                           </div>
+                           <div class="font-weight-bold mr-2">
+                              <div class="text-truncate">王二</div>
+                              <div class="small text-gray-500">美术设计师
+                              </div>
+                           </div>
+                           <span class="ml-auto"><button type="button" class="btn btn-outline-primary btn-sm">联系</button>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box mb-3 shadow-sm border rounded bg-white list-sidebar">
+                     <div class="box-title border-bottom p-3">
+                        <h6 class="m-0">数据统计</h6>
+                     </div>
+                     <ul class="list-group list-group-flush">
+                        <a href="#">
+                           <li class="list-group-item pl-3 pr-3 d-flex align-items-center text-dark"><i class="feather-users mr-2 text-dark"></i>会员<span class="ml-auto font-weight-bold">168</span></li>
+                        </a>
+                        <a href="#">
+                           <li class="list-group-item pl-3 pr-3 d-flex align-items-center text-dark"><i class="feather-book mr-2 text-dark"></i>文档<span class="ml-auto font-weight-bold">899</span></li>
+                        </a>
+                        <a href="#">
+                           <li class="list-group-item pl-3 pr-3 d-flex align-items-center text-dark"><i class="feather-user-check mr-2 text-dark"></i>认证用户<span class="ml-auto font-weight-bold">196</span></li>
+                        </a>
+                        <a href="#">
+                           <li class="list-group-item pl-3 pr-3 d-flex align-items-center text-dark"><i class="feather-message-circle mr-2 text-dark"></i>话题<span class="ml-auto font-weight-bold">19</span></li>
+                        </a>
+                        <a href="#">
+                           <li class="list-group-item pl-3 pr-3 d-flex align-items-center text-dark"><i class="feather-clipboard mr-2 text-dark"></i>页面<span class="ml-auto font-weight-bold">31</span></li>
+                        </a>
+                        <a href="#">
+                           <li class="list-group-item pl-3 pr-3 d-flex align-items-center text-dark"><i class="feather-tag mr-2 text-dark"></i>标签<span class="ml-auto font-weight-bold">18</span></li>
+                        </a>
+                     </ul>
+                  </div>
+                  <div class="box shadow-sm border rounded bg-white mb-3">
+                           <div class="box-title border-bottom p-3">
+                              <h6 class="m-0">后记</h6>
+                           </div>
+                           <div class="box-body p-3">
+                              <p>软件开发是一件很痛苦的事情，哪怕是鼠标的一个点击事件，或许程序员都要思考半天。
+                              </p>
+                              <p>看某想说很多很的，待我抽时间再来吧！</p>
+                           </div>
+                        </div>
+               </aside>
+            </div>
+         </div>
+      </div>
+      <!-- Bootstrap core JavaScript -->
+      <script src="../public/vendor/jquery/jquery-3.4.1.min.js"></script>
+      <script src="../public/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
 </html>
