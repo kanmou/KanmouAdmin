@@ -25,20 +25,18 @@ function autoFit() {
   // alert($(".tab-box").height());
 	
   //
-  // var winWidth = width($(window).width();
-  // var rightWidth =  width($(window).width()-280;
+  
 
   $(".show-hide a").click(function () {
+    var winWidth = $(window).width();
+    var rightWidth =  $(window).width()-280;
     // 如果左侧菜单隐藏
     if($(".sidebar").css("display") == 'none'){
       // 右侧容器宽度在原有的基础上减少像素
       // 添加左移动按钮的左边框
       // 还原左侧菜单的宽度
       // 显示左侧菜单
-      /*$(".main-right").width(function(index,oldvalue){
-       return oldvalue-280;
-      });*/
-      $(".main-right").css("width",$(window).width()-280)
+      $(".main-right").animate({width:rightWidth});
       $(".roll-left").css("border-left","solid 1px #ddd");   
       $(".sidebar").animate({width:"280px"});      
       $(".sidebar").show();
@@ -47,10 +45,7 @@ function autoFit() {
       // 移除左移动按钮的左边框
       // 左侧菜单宽度归零
       // 隐藏左侧菜单
-      /*$(".main-right").width(function(index,oldvalue){
-       return oldvalue+280;
-      });*/
-      $(".main-right").css("width",$(window).width())
+      $(".main-right").animate({width:winWidth});
       $(".roll-left").css("border-left","none");  
       $(".sidebar").animate({width:"0px"});      
       $(".sidebar").hide(300);      
