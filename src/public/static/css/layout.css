@@ -4,7 +4,7 @@ html,body{overflow-x:hidden;overflow-y:hidden;margin:0;padding:0;
 	color:rgba(0,0,0,.87);
 	font-family: Helvetica Neue,NotoSansHans-Regular,AvenirNext-Regular,arial,Hiragino Sans GB,Microsoft Yahei,WenQuanYi Micro Hei,serif;
 }
-iframe {overflow-x:hidden;overflow-y:auto;}
+
     
     
 ul,li{ padding:0;margin:0;list-style:none}
@@ -141,7 +141,10 @@ z-index: 11}
 .page-tabs .tab-panel .tab-close{margin-left: 10px;font-size: 14px}
 /* tab样式 */
 .left-nav .navbar{padding: 0;content: left;}
+.k_iframe{position: relative;overflow: hidden;height: 100px;}
+iframe {position: absolute;left: 0px;top: 0px;margin: 0;padding: 0;overflow-x: hidden;
+    overflow-y: scroll;}
 /* border-bottom: 1px solid #edeef0;
     background-color: #fcfcfc; */
-.footer{position: relative;bottom: 0;border-top: 2px solid #edeef0;
+.footer{position: fixed;bottom: 0;border-top: 2px solid #edeef0;z-index:10;
   text-align: center;color: #666;height:40px;line-height:38px;width: 100%;box-sizing: border-box;}

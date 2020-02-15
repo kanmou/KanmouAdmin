@@ -17,7 +17,7 @@ function autoFit() {
 	var main  = $(window).height()-$(".header").height()-$(".footer").height();
 	$(".main").height(main);
   // iframe高度
-  $(".k_iframes").height(main-$(".tab-box").height()-1);
+  $(".k_iframe").height(main-$(".tab-box").height());
   // 左侧导航顶部容器的高度等于右侧TAB容器的高度
   $(".nav-top-box").height($(".tab-box").height());
   // 左侧导航的高度
