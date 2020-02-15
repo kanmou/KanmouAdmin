@@ -9,5 +9,5 @@
 2.  KanmouAdmin处于开发调试中，目录结构及代码重构性比较高，所以本仓库暂未放置开源许可协议，在未增加开源许可协议之前，仓库代码仅供学习研究所用。
 3.  欢迎各位高手给予赐教，看某在此先谢谢了。
 
-#### KanmouAdmin预览图（2020年2月14日）
-<img src="doc/KanmouAdmin200214.png"/>
+#### KanmouAdmin预览图（2020年2月16日）
+<img src="doc/KanmouAdmin200216.png"/>
