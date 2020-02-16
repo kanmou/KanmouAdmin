@@ -175,7 +175,10 @@ function test() {
                     } },
                     null, // divider
                     {label:'刷 新',
-                    action:function() { alert('开发中 5') } },
+                    action:function() {
+                      $(".k_iframe iframe[src='"+dataId+"']").attr('src', $(".k_iframe iframe[src='"+dataId+"']").attr('src'));
+                      return false;
+                    } },
                     null, // divider
                     {label:'退 出',
                     action:function() { return false; } }
