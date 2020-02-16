@@ -145,7 +145,22 @@ function test() {
 
                     {label:'关闭左侧标签',
                     action:function() {
-                      } },
+                      /**
+                       *  开发思路
+                       *  1.判断当前标签是否激活，如果激活，关闭左侧除“首页”外的所有标签；
+                       *  反正，关闭除“首页”及激活的标签外的所有标签。
+                       */
+                      if($(e.target).hasClass("active")){
+                        $(e.target).prevAll().not("a[isHome='1']").remove();
+                        $(".k_iframe iframe[src='"+dataId+"']").prevAll().not("iframe[isHome='1']").remove();
+                      }else{
+                        var activeId = $(e.target).prevAll(".active").attr("data-id");
+                        $(e.target).prevAll().not("a[isHome='1']").not(".active").remove();
+                        $(".k_iframe iframe[src='"+dataId+"']").prevAll().not("iframe[isHome='1']").not("iframe[src='"+activeId+"']").remove();
+                      }
+                      return false;
+                      }
+                    },
                     
                     {label:'关闭右侧标签',
                     action:function() { alert('开发中 4') } },
