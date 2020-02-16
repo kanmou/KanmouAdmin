@@ -99,7 +99,10 @@ function test() {
         var prevDataId = $(e.target).prev().attr("data-id");
         // alert($(e.target).hasClass("tab-close"));
         if(3 == e.which){
+          // 限制在tab选项卡上的关闭按钮上点击右键不生成右键菜单
           if (($(e.target).hasClass("tab-close"))) {return false;}
+          // "首页"tab菜单取消右键菜单
+          if ($(e.target).attr("isHome")) {return false;}
              // 鼠标右键属性菜单
             $(this).contextPopup({
                 // title: '这是右键菜单',
