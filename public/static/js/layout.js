@@ -46,7 +46,35 @@ $(function(){
       this.clickMenu();
       // 创建菜单搜索表单
       this.menuSearch($("#form"), $("#nav-list"));
-      this.clickTab();        
+      this.closeTab();
+      this.clickTab();             
+  },
+  // TAB菜单关闭点击事件
+  closeTab:function () {
+    $(".tab-panel").on('click','span',function(e) {
+      e.stopPropagation();//防止事件冒泡到DOM树上，也就是不触发的任何前辈元素上的事件处理函数。
+      var dataId = $(this).parent().attr("data-id");
+      var nextDataId = $(this).parent().next().attr("data-id");
+      var prevDataId = $(this).parent().prev().attr("data-id");
+      // 判断当前TAB选项是否激活
+      if ($(this).parents().hasClass("active")) {
+        // 判断是否有下一个tab选项
+        // 如果存在，则激活下一个选项菜单，否则激活上一个
+        // 同时激活相应的ifram页面
+        if ($(this).parent().next().length>0) {          
+          // 激活下一个tab选项卡及对应的iframe页面
+          $(this).parent().next().addClass("active");
+          $(".k_iframe iframe[src='"+nextDataId+"']").css("display","");          
+        }else{
+          // 激活下一个tab选项卡及对应的iframe页面
+          $(this).parent().prev().addClass("active");
+          $(".k_iframe iframe[src='"+prevDataId+"']").css("display",""); 
+        }
+      }
+      // 删除当前选项卡及其对应的iframe页面
+      $(this).parent().remove();
+      $(".k_iframe iframe[src='"+dataId+"']").remove();
+    });
   },
   /**
    * [clickTab description]
@@ -55,6 +83,8 @@ $(function(){
   clickTab: function() {
       // 绑定元素a的点击事件
       $(".tab-panel").on('mousedown','a',function(e) {
+        e.stopPropagation();
+        e.preventDefault();
           if(3 == e.which){ 
                // 鼠标右键属性菜单
               $(this).contextPopup({
@@ -81,6 +111,8 @@ $(function(){
                   ]
               });        
       }else if(1 == e.which){// 左键点击事件
+        // 过滤单独点击tab关闭按钮
+        if($(e.target).text() == '×'){return false;}
           // 当前tab的左偏移值
           var thisTab = $(this).offset().left;
           // 当前tab的宽度

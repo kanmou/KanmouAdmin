@@ -131,14 +131,14 @@ z-index: 11}
 .content-tabs .roll-left,.content-tabs .roll-right{height:39px;width:41px;outline:0;background:#fafafa;color:#000;}
 .content-tabs button {border:0;line-height: 39px;}
 
-.page-tabs {position: absolute;margin-left:41px;width:100000px;height:39px;overflow:hidden;}
+.page-tabs {position: absolute;margin-left:41px;width:100000px;height:39px;}
 .page-tabs .tab-panel {position:relative;float:left;z-index: 0;}
-.page-tabs a {display:block;float:left;border-right:solid 1px #f1f1f1;padding:0 15px;color:rgba(0,0,0,.87);box-sizing: border-box;}
+.page-tabs a {display:block;float:left;border-right:solid 1px #f1f1f1;padding:0 10px;color:rgba(0,0,0,.87);box-sizing: border-box;}
 .page-tabs a span:hover {color:#c00;}
 .page-tabs a:hover,.content-tabs .roll-nav:hover {color:#000;background:#e2e2e2;cursor:pointer; text-decoration:none;}
 .page-tabs a span {color:#ccc;cursor:default}
 .page-tabs a.active,.page-tabs a.active:hover,.page-tabs a.active i:hover {background:#e2e2e2;color:#000;}
-.page-tabs .tab-panel .tab-close{margin-left: 10px;font-size: 14px}
+.page-tabs .tab-panel .tab-close{margin-left: 8px;padding-left: 4px;padding-right: 4px;}
 /* tab样式 */
 .left-nav .navbar{padding: 0;content: left;}
 .k_iframe{position: relative;overflow: hidden;height: 100px;}
