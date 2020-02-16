@@ -1,4 +1,11 @@
-//DOM加载完毕
+/****************************************************
+ * @softwareName KanmouAdmin
+ * @version v20200214
+ * @author 看某<kanmou@qq.com>
+ * @link www.kanmou.net
+ * @license [url] [description]
+ * @copyright (c)看某,版权所有
+ ****************************************************/
 $(function(){
   autoFit();
   $(".header-nav-item a").hover(function() {
@@ -17,7 +24,9 @@ $(function(){
       singleOpen: false,//单一开关，手风琴样式
       items: [],
   };
-
+function test() {
+  alert('111111');
+}
   /**
    * [Plugin 给对象添加属性和方法、初始化插件]
    * @param {[type]} element [description]
@@ -85,31 +94,51 @@ $(function(){
       $(".tab-panel").on('mousedown','a',function(e) {
         e.stopPropagation();
         e.preventDefault();
-          if(3 == e.which){ 
-               // 鼠标右键属性菜单
-              $(this).contextPopup({
+        var dataId = $(e.target).attr("data-id");
+        var nextDataId = $(e.target).next().attr("data-id");
+        var prevDataId = $(e.target).prev().attr("data-id");
+        // alert($(e.target).hasClass("tab-close"));
+        if(3 == e.which){
+          if (($(e.target).hasClass("tab-close"))) {return false;}
+             // 鼠标右键属性菜单
+            $(this).contextPopup({
+                // title: '这是右键菜单',
+                items: [
+                  {label:'关闭标签',
+                    action:function() {
+                      if($(e.target).hasClass("active")){
+                        if ($(e.target).next().length>0) {          
+                          // 激活下一个tab选项卡及对应的iframe页面
+                          $(e.target).next().addClass("active");
+                          $(".k_iframe iframe[src='"+nextDataId+"']").css("display","");          
+                        }else{
+                          // 激活下一个tab选项卡及对应的iframe页面
+                          $(e.target).prev().addClass("active");
+                          $(".k_iframe iframe[src='"+prevDataId+"']").css("display",""); 
+                        }
+                      }
+                      // 删除当前选项卡及其对应的iframe页面
+                      $(e.target).remove();
+                      $(".k_iframe iframe[src='"+dataId+"']").remove();
+                    }
+                  },
 
-                  // title: '这是右键菜单',
-                  items: [
-                      {label:'关闭标签',
-                      action:function() { alert('clicked 1') } },
+                    {label:'关闭其他标签',
+                    action:function() { alert('开发中 2') } },
 
-                      {label:'关闭其他标签',
-                      action:function() { alert('clicked 2') } },
-
-                      {label:'关闭左侧标签',
-                      action:function() { alert('clicked 3') } },
-                      
-                      {label:'关闭右侧标签',
-                      action:function() { alert('clicked 4') } },
-                      null, // divider
-                      {label:'刷 新',
-                      action:function() { alert('clicked 5') } },
-                      null, // divider
-                      {label:'退 出',
-                      action:function() { return false; } }
-                  ]
-              });        
+                    {label:'关闭左侧标签',
+                    action:function() { alert('开发中 3') } },
+                    
+                    {label:'关闭右侧标签',
+                    action:function() { alert('开发中 4') } },
+                    null, // divider
+                    {label:'刷 新',
+                    action:function() { alert('开发中 5') } },
+                    null, // divider
+                    {label:'退 出',
+                    action:function() { return false; } }
+                ]
+            });        
       }else if(1 == e.which){// 左键点击事件
         // 过滤单独点击tab关闭按钮
         if($(e.target).text() == '×'){return false;}
