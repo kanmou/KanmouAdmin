@@ -180,6 +180,20 @@ function test() {
                       return false;
                     } },
                     null, // divider
+                    {label:'关闭所有标签',
+                    action:function() {
+                      /**
+                       * 开发思路
+                       * 激活首页标签及其对应的iframe页面
+                       * 关闭除首页外的所有标签及其iframe页面
+                       */
+                      $(".tab-panel a[isHome='1']").addClass("active");
+                      $(".k_iframe iframe[isHome='1']").css("display","");
+
+                      $(".tab-panel a").siblings().not("a[isHome='1']").remove();
+                      $(".k_iframe iframe").siblings().not("iframe[isHome='1']").remove();
+                    } },
+                    null, // divider
                     {label:'退 出',
                     action:function() { return false; } }
                 ]
