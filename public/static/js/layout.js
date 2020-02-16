@@ -163,7 +163,16 @@ function test() {
                     },
                     
                     {label:'关闭右侧标签',
-                    action:function() { alert('开发中 4') } },
+                    action:function() {
+                      if($(e.target).hasClass("active")){
+                        $(e.target).nextAll().not("a[isHome='1']").remove();
+                        $(".k_iframe iframe[src='"+dataId+"']").nextAll().not("iframe[isHome='1']").remove();
+                      }else{
+                        var activeId = $(e.target).nextAll(".active").attr("data-id");
+                        $(e.target).nextAll().not("a[isHome='1']").not(".active").remove();
+                        $(".k_iframe iframe[src='"+dataId+"']").nextAll().not("iframe[isHome='1']").not("iframe[src='"+activeId+"']").remove();
+                      }
+                    } },
                     null, // divider
                     {label:'刷 新',
                     action:function() { alert('开发中 5') } },
