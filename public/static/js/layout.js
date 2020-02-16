@@ -125,12 +125,27 @@ function test() {
                       $(".k_iframe iframe[src='"+dataId+"']").remove();
                     }
                   },
-
                     {label:'关闭其他标签',
-                    action:function() { alert('开发中 2') } },
+                    action:function() {
+                      if($(e.target).hasClass("active")){
+                        // 删除当前选项卡外的所有tab标签及其对应的iframe页面
+                        $(e.target).siblings().not("a[isHome='1']").remove();
+                        $(".k_iframe iframe[src='"+dataId+"']").siblings().not("iframe[isHome='1']").remove();
+                      }else{
+                        // 激活当前标签及其对应的iframe页面
+                        $(e.target).addClass("active");
+                        $(".k_iframe iframe[src='"+dataId+"']").css("display",""); 
+                        // 关闭当前标签及首页标签外的所有标签及iframe页面
+                        $(e.target).siblings().not("a[isHome='1']").remove();
+                        $(".k_iframe iframe[src='"+dataId+"']").siblings().not("iframe[isHome='1']").remove();
+                      }
+                      return false;
+                      }                      
+                    },
 
                     {label:'关闭左侧标签',
-                    action:function() { alert('开发中 3') } },
+                    action:function() {
+                      } },
                     
                     {label:'关闭右侧标签',
                     action:function() { alert('开发中 4') } },
